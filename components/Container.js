@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import {
   SimpleGrid,
@@ -10,6 +10,7 @@ import {
 } from "@chakra-ui/react";
 import { useFilter } from "@/context/FilterContext";
 import Loading from "./Loading";
+import images from "../Images.json";
 
 function Container() {
   const { ships, filter } = useFilter();
@@ -45,7 +46,7 @@ function Container() {
               cursor="pointer"
             >
               <Image
-                src="https://www.denofgeek.com/wp-content/uploads/2019/12/star-wars-jedi-starfighter.jpg?w=1024"
+                src={images.find((item) => item.name === ship.name)?.img}
                 alt="starship"
                 height={200}
                 width="100%"

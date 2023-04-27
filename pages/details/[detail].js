@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { useFilter } from "@/context/FilterContext";
 import { BiArrowBack } from "react-icons/bi";
+import images from "../../Images.json";
 
 function Detail() {
   const [starship, setStarship] = useState(null);
@@ -63,7 +64,7 @@ function Detail() {
           </Heading>
 
           <Image
-            src="https://www.denofgeek.com/wp-content/uploads/2019/12/star-wars-jedi-starfighter.jpg?w=1024"
+            src={images.find((item) => item.name === starship?.name)?.img}
             alt="starship"
             height={250}
             width="100%"
