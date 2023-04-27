@@ -3,7 +3,7 @@ import { Heading } from "@chakra-ui/react";
 
 function Header() {
   return (
-    <Heading size="4xl" textAlign="center">
+    <Heading size="4xl" mt={10} textAlign="center">
       STAR WARS
     </Heading>
   );
