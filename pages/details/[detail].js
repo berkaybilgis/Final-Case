@@ -1,14 +1,6 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import {
-  Button,
-  Box,
-  Image,
-  Heading,
-  Text,
-  SimpleGrid,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Image, Heading, Text, Center } from "@chakra-ui/react";
 import { useFilter } from "@/context/FilterContext";
 import { BiArrowBack } from "react-icons/bi";
 import images from "../../Images.json";
@@ -26,8 +18,6 @@ function Detail() {
     setFilteredShips(JSON.parse(localStorage.getItem("filteredShips")));
   };
 
-  console.log(starship);
-
   return (
     <div>
       <button
@@ -42,8 +32,10 @@ function Detail() {
 
       <Center>
         <Box
-          className="Card"
-          backgroundColor="gray.800"
+          className="card-detail"
+          backgroundColor="gray.700"
+          border="3px solid"
+          borderColor="white"
           borderRadius={25}
           textAlign="center"
           mt={140}

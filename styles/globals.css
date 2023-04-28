@@ -4,8 +4,8 @@
   padding: 15px;
   border: 0px solid;
   border-radius: 50px;
-  margin-top: 10px;
-  margin-left: 10px;
+  margin-top: 20px;
+  margin-left: 19px;
 }
 
 .detail-btn:hover {
@@ -13,5 +13,24 @@
 }
 
 .navbar {
+  background-color: gray;
+}
+
+.home {
+  background: url(../public/pngegg.png) no-repeat;
+  background-size: 45px;
+  position: absolute;
+  top: 6px;
+  width: 45px;
+  height: 45px;
+  opacity: 0.7;
+}
+
+.home:hover {
+  cursor: pointer;
+  opacity: 1;
+}
+
+.card-container:hover {
   background-color: gray;
 }
