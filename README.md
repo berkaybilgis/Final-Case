@@ -15,6 +15,8 @@ yarn dev
 pnpm dev
 ```
 
+Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3000) linkini açın.
+
 ## Özellikler
 
 + Context API kullanılarak geliştirildi.
@@ -35,8 +37,6 @@ pnpm dev
 + Axios
 + Chakra UI
 + React-Icons
-
-Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3000) linkini açın.
 
 ### Ana Sayfa Butonu (Kask Logosu) Canlı Gösterim
 
