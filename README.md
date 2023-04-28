@@ -17,6 +17,16 @@ pnpm dev
 
 Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3000) linkini açın.
 
+## Kullanılan API'lar
+
++ SWAPI kullanılarak geliştirildi.
+
+## Kullanılan Kütüphaneler
+
++ Axios
++ Chakra UI
++ React-Icons
+
 ## Özellikler
 
 + Context API kullanılarak geliştirildi.
@@ -27,16 +37,6 @@ Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3
 + Daha detaylı bir veriye ulaşmak istenildiğine uzay gemisi kartlarına tıklanarak geminin detay sayfasına gidilir.
 + Detay sayfasından " <- " butonu ile bir önceki sayfaya geçilir.
 + Sol üstteki kask logosu ana sayfa butonu olarak tasarlanmıştır.
-
-## Kullanılan API'lar
-
-+ SWAPI kullanılarak geliştirildi.
-
-## Kullanılan Kütüphaneler
-
-+ Axios
-+ Chakra UI
-+ React-Icons
 
 ### Ana Sayfa Butonu (Kask Logosu) Canlı Gösterim
 
