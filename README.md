@@ -1,4 +1,4 @@
-# Starship Search App
+# Uzay Gemisi Arama Uygulaması
 
 ![ana sayfa](https://user-images.githubusercontent.com/99799385/235220164-24d366f0-9316-481f-9899-32f0a6319a70.png)
 
