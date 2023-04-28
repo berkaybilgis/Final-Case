@@ -3,6 +3,18 @@
 ![ana sayfa](https://user-images.githubusercontent.com/99799385/235220164-24d366f0-9316-481f-9899-32f0a6319a70.png)
 
 
+## Sitenin Çalıştırılması
+
+İlk olarak, geliştirici sunucuyu çalıştırın:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
+
 ## Özellikler
 
 + Context API kullanılarak geliştirildi.
@@ -23,18 +35,6 @@
 + Axios
 + Chakra UI
 + React-Icons
-
-## Sitenin Çalıştırılması
-
-İlk olarak, geliştirici sunucuyu çalıştırın:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
 Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3000) linkini açın.
 
