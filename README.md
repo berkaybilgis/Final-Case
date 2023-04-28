@@ -1,6 +1,6 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMzA0NWQ0MWNiMjMyZWRlNjRhNWMyYjQ1MTMzNzUwMjdiYTcwMjE3ZSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/cXcriRkgUm2fLsfnwy/giphy.gif
+
 
 ## Getting Started
 
