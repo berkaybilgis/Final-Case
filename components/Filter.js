@@ -38,7 +38,7 @@ function Filter() {
       <form onSubmit={(e) => handleSubmit(e)}>
         <FormControl>
           <InputGroup mt="10" justifyContent="center">
-            <FormLabel mt="2" color="white">
+            <FormLabel mt="2" ml="2px" color="white">
               Name / Modal
             </FormLabel>
             <Input
@@ -55,6 +55,7 @@ function Filter() {
               type="submit"
               colorScheme="blue"
               ml="3"
+              mr={1}
               pl="7"
               pr="7"
               size="md"
