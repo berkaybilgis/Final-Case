@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
   Input,
   InputGroup,
@@ -30,16 +30,18 @@ function Filter() {
     setSearch("");
   };
 
-  // console.log("filter input:", filtered);
   return (
     <div>
       <form onSubmit={(e) => handleSubmit(e)}>
         <FormControl>
           <InputGroup mt="10" justifyContent="center">
-            <FormLabel mt="2">Name / Modal</FormLabel>
+            <FormLabel mt="2" color="white">
+              Name / Modal
+            </FormLabel>
             <Input
               type="text"
               placeholder="Name / Model"
+              color="white"
               value={search}
               width="sm"
               onChange={(e) => handleChange(e)}
