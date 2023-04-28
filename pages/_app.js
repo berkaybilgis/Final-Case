@@ -8,6 +8,7 @@ export default function App({ Component, pageProps }) {
   return (
     <FilterProvider>
       <ChakraProvider>
+        {/* arkaplan ayarlandı */}
         <Box
           bg="url('/GCJRhiA.png')"
           backgroundRepeat="repeat"

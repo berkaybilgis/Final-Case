@@ -4,8 +4,8 @@ import { useRouter } from "next/router";
 import { useFilter } from "@/context/FilterContext";
 
 function Navbar() {
-  const router = useRouter();
-  const { setFilter } = useFilter();
+  const router = useRouter(); // next.js router çağırıldı
+  const { setFilter } = useFilter(); // context üzerinden setFilter alındı
 
   return (
     <>
@@ -14,8 +14,8 @@ function Navbar() {
         ml={5}
         className="home"
         onClick={() => {
-          router.push("/");
-          setFilter("");
+          router.push("/"); // helmet logosuna tıklandığında ana sayfaya gider
+          setFilter(""); // tıklama yapıldığında filter'ın içeriğini temizler
         }}
       ></Box>
     </>

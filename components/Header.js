@@ -4,6 +4,7 @@ import { Center } from "@chakra-ui/react";
 
 function Header() {
   return (
+    // header oluşturuldu
     <Center mt={5}>
       <Image
         src="/starwarstext.png"

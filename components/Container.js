@@ -13,16 +13,18 @@ import Loading from "./Loading";
 import images from "../Images.json";
 
 function Container() {
-  const { ships, filter } = useFilter();
-  const [numShown, setNumShown] = useState(10);
-  const router = useRouter();
+  const { ships, filter } = useFilter(); // context üzerinden ships ve filter alındı
+  const [numShown, setNumShown] = useState(10); // gösterilecek item sayısını belirlemek için state oluşturuldu
+  const router = useRouter(); // detay sayfasına yönlendirme yapmak için next router çağırıldı
 
+  // her tıklama yapıldığında diğer 10 uzay gemisini de state'e ekleyen fonksiyon
   const handleClick = () => {
     setNumShown((prev) => prev + 10);
   };
 
   return (
     <div>
+      {/* Responsive olması için SimpleGrid kullanıldı ve tanımlamaları yapıldı */}
       <SimpleGrid
         columns={[1, 2, 3, 4, 5]}
         spacing={[25, 25, 25, 25, 35, 50]}
@@ -31,6 +33,7 @@ function Container() {
         ml={[12, 12, 15, 17, 17, 20]}
         mr={[12, 12, 15, 17, 17, 20]}
       >
+        {/* ships içerisindeki verileri numShown sayısına göre sınırlandırıp gösteren card bölümü */}
         {ships &&
           ships.slice(0, numShown).map((ship, i) => (
             <Box
@@ -42,13 +45,13 @@ function Container() {
               borderRadius={25}
               textAlign="center"
               onClick={() => {
-                localStorage.setItem("selectedShip", JSON.stringify(ship));
-                router.push(`details/${ship.name}`);
+                localStorage.setItem("selectedShip", JSON.stringify(ship)); // card'a tıklandığında localStorage'a o anki card verilerini kaydeder
+                router.push(`details/${ship.name}`); // card'a tıklandığında o uzay gemisinin adına göre detay sayfasına gider
               }}
               cursor="pointer"
             >
               <Image
-                src={images.find((item) => item.name === ship.name)?.img}
+                src={images.find((item) => item.name === ship.name)?.img} // images.json dosyasından img alındı
                 alt="starship"
                 height={200}
                 width="100%"
@@ -56,6 +59,7 @@ function Container() {
                 borderRadius={25}
               />
 
+              {/* Card başlığı oluşturuldu */}
               <Heading
                 className="title"
                 size="md"
@@ -66,6 +70,7 @@ function Container() {
                 {ship.name}
               </Heading>
 
+              {/* Card text bölümü oluşturuldu */}
               <Box className="text-area" mt="3" mb={7}>
                 <Box textAlign="left" pl="25px" pr="25px" color="white">
                   <Text display="inline" fontWeight="medium">
@@ -85,6 +90,7 @@ function Container() {
           ))}
       </SimpleGrid>
 
+      {/* belirli sınırlandırmalara göre Load More butonu oluşturuldu */}
       {ships && numShown <= ships.length ? (
         <Box textAlign="center">
           <Button
@@ -98,12 +104,15 @@ function Container() {
           </Button>
         </Box>
       ) : ships.length !== 0 && ships.length > 10 ? (
+        // gösterilecek herhangi bir uzay gemisi kalmadığında gösterilen yazı
         <Box textAlign="Center" color="white">
           There are no more starships left to show.
         </Box>
       ) : (
         ""
       )}
+
+      {/* ships, ships.length ve filter sınırlandırmalarına göre Loading component gösterildi */}
       {ships && ships.length === 0 && !filter && <Loading />}
     </div>
   );

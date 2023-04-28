@@ -1,50 +1,53 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
 
-const FilterContext = createContext();
+const FilterContext = createContext(); // context oluşturuldu
 
 export const FilterProvider = ({ children }) => {
-  const [filter, setFilter] = useState("");
-  const [ships, setShips] = useState([]);
-  const [filteredShips, setFilteredShips] = useState([]);
+  const [filter, setFilter] = useState(""); // filter verilerini tutan state
+  const [ships, setShips] = useState([]); // başlangıçta apiden çekilen verileri tutan state
+  const [filteredShips, setFilteredShips] = useState([]); // filtreleme sonucunda kalan verileri tutan state
 
-  const url = "https://swapi.dev/api/starships/?page";
+  const url = "https://swapi.dev/api/starships/?page"; // api url
 
+  // sayfa ilk yüklendiğinde apiden verileri çeker
   useEffect(() => {
     async function fetchData() {
       try {
         let i;
-        let allShips = [];
+        let allShips = []; // for döngüsünden dönen verileri tutar
         for (i = 1; i < 5; i++) {
-          const response = await axios.get(`${url}=${i}`);
-          allShips = [...allShips, ...response.data?.results];
+          const response = await axios.get(`${url}=${i}`); // axios ile apiden veriler alınır
+          allShips = [...allShips, ...response.data?.results]; // alınan veriler allShips'e aktarılır
         }
-        setShips(allShips);
-        setFilteredShips(allShips);
-        localStorage.setItem("allShips", JSON.stringify(allShips));
+        setShips(allShips); // döngü bitiminde allShips'deki verileri ships'e aktarılır
+        setFilteredShips(allShips); // döngü bitiminde allShips'deki verileri filteredShips'e aktarılır
+        localStorage.setItem("allShips", JSON.stringify(allShips)); // döngü bitiminde allShips'deki veriler localStorage'a kaydedilir
       } catch (error) {
-        console.error(error);
+        console.error(error); // error olması durumunda konsola hata verisini gösterir
       }
     }
 
     fetchData();
   }, []);
 
+  // gelen filter'a göre filtreleme yapıp bunu filteredShips state'e aktaran fonksiyon
   useEffect(() => {
     const filtered = ships.filter((ship) => {
       if (!filter) {
         return ship;
       }
       return (
-        ship.name.toLowerCase().includes(filter.toLowerCase()) ||
-        ship.model.toLowerCase().includes(filter.toLowerCase())
+        ship.name.toLowerCase().includes(filter.toLowerCase()) || // isime göre filtreleme işlemi
+        ship.model.toLowerCase().includes(filter.toLowerCase()) // modele göre filtreleme işlemi
       );
     });
 
-    setFilteredShips(filtered);
-    localStorage.setItem("filteredShips", JSON.stringify(filtered));
+    setFilteredShips(filtered); // filtrelenmiş veriler filteredShips'e aktarıldı
+    localStorage.setItem("filteredShips", JSON.stringify(filtered)); // filtrelenmiş veriler localStorage'a kaydedildi
   }, [filter, ships]);
 
+  // provider ile diğer componentlara gönderilen değerler
   const values = {
     ships: filteredShips,
     setShips,
@@ -58,4 +61,4 @@ export const FilterProvider = ({ children }) => {
   );
 };
 
-export const useFilter = () => useContext(FilterContext);
+export const useFilter = () => useContext(FilterContext); // her sayfada useContext tekrarı oluşmaması açısından useFilter oluşturuldu
