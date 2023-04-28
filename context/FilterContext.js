@@ -45,7 +45,6 @@ export const FilterProvider = ({ children }) => {
     localStorage.setItem("filteredShips", JSON.stringify(filtered));
   }, [filter, ships]);
 
-  // console.log(ships);
   const values = {
     ships: filteredShips,
     setShips,
