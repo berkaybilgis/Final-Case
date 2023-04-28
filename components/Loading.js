@@ -3,7 +3,7 @@ import { Box } from "@chakra-ui/react";
 
 function Loading() {
   return (
-    <Box textAlign="center" fontSize="lg">
+    <Box textAlign="center" fontSize="lg" color="white">
       Loading...
     </Box>
   );
