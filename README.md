@@ -1,6 +1,7 @@
-#Starship Search App
+# Starship Search App
 
-![ana sayfa](https://user-images.githubusercontent.com/99799385/235217572-bfd47ac8-df6e-420c-bc24-51a486ef3612.png)
+![ana sayfa](https://user-images.githubusercontent.com/99799385/235220164-24d366f0-9316-481f-9899-32f0a6319a70.png)
+
 
 ## Özellikler
 
