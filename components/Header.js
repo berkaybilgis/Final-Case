@@ -1,11 +1,18 @@
 import React from "react";
-import { Heading } from "@chakra-ui/react";
+import Image from "next/image";
+import { Center } from "@chakra-ui/react";
 
 function Header() {
   return (
-    <Heading size="4xl" mt={10} textAlign="center">
-      STAR WARS
-    </Heading>
+    <Center mt={5}>
+      <Image
+        src="/starwarstext.png"
+        alt="starwars"
+        width="500"
+        height="220"
+        priority={true}
+      />
+    </Center>
   );
 }
 
