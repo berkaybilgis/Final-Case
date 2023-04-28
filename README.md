@@ -31,6 +31,7 @@ Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3
 
 + Context API kullanılarak geliştirildi.
 + Projede Next.js ve React kullanıldı.
++ Responsive design dikkate alınarak tasarlandı.
 + Başlangıçta bütün uzay gemileri ana sayfada bulunur.
 + "Load More" butonu ile daha fazla uzay gemisi yüklenir.
 + Arama çubuğunda Star Wars evreninden her türlü uzay gemisi isim veya modeline göre filtrelenebilir.
