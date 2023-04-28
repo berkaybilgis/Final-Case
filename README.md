@@ -40,7 +40,7 @@ Sonucu görmek için tarayıcınızda [http://localhost:3000](http://localhost:3
 
 ### Ana Sayfa Butonu (Kask Logosu) Canlı Gösterim
 
-+ Detay sayfasından Ana Sayfa butonu ile ana sayfaya geçiş gösterimi.
+- Detay sayfasından Ana Sayfa butonu ile ana sayfaya geçiş gösterimi.
 
 ![home-button](https://user-images.githubusercontent.com/99799385/235221718-d8aabfd8-6869-4e77-bfb3-117bf1612a38.gif)
 
