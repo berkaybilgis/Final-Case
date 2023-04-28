@@ -44,3 +44,8 @@ Detay sayfasından Ana Sayfa butonu ile ana sayfaya geçiş gösterimi.
 
 ![home-button](https://user-images.githubusercontent.com/99799385/235221718-d8aabfd8-6869-4e77-bfb3-117bf1612a38.gif)
 
+### Geri Butonu Canlı Gösterim
+
+Detay sayfasından bir önceki sayfaya geri butonu ile geçiş gösterimi.
+
+![back-button](https://user-images.githubusercontent.com/99799385/235222319-dc9ce615-3f88-4204-b975-cda10e2f3b1d.gif)
