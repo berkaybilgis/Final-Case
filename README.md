@@ -2,7 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![PwmpSZCnf7rCzcE08O](https://user-images.githubusercontent.com/99799385/235215065-2985babb-c478-4bd8-81ee-3cf9ebe79816.gif)
 
-<img src=![PwmpSZCnf7rCzcE08O](https://user-images.githubusercontent.com/99799385/235215065-2985babb-c478-4bd8-81ee-3cf9ebe79816.gif) width="500" height="500"/>
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExZWZiODk3ZDdmOWMxMWFiMDM3NDZiMTkwYmM1ZjZjNDViOTBiMjI3NyZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/PwmpSZCnf7rCzcE08O/giphy.gif" width="500" height="500"/>
+
 
 
 ## Getting Started
