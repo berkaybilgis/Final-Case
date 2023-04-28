@@ -1,3 +1,28 @@
+#Starship Search App
+
+![ana sayfa](https://user-images.githubusercontent.com/99799385/235217572-bfd47ac8-df6e-420c-bc24-51a486ef3612.png)
+
+## Özellikler
+
++ Context API kullanılarak geliştirildi.
++ Projede Next.js ve React kullanıldı.
++ Başlangıçta bütün uzay gemileri ana sayfada bulunur.
++ "Load More" butonu ile daha fazla uzay gemisi yüklenir.
++ Arama çubuğunda Star Wars evreninden her türlü uzay gemisi isim veya modeline göre filtrelenebilir.
++ Daha detaylı bir veriye ulaşmak istenildiğine uzay gemisi kartlarına tıklanarak geminin detay sayfasına gidilir.
++ Detay sayfasından " <- " butonu ile bir önceki sayfaya geçilir.
++ Sol üstteki kask logosu ana sayfa butonu olarak tasarlanmıştır.
+
+## Kullanılan API'lar
+
++ SWAPI kullanılarak geliştirildi.
+
+## Kullanılan Kütüphaneler
+
++ Axios
++ Chakra UI
++ React-Icons
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
