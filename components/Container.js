@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
 import {
   SimpleGrid,
@@ -35,8 +35,10 @@ function Container() {
           ships.slice(0, numShown).map((ship, i) => (
             <Box
               key={i}
-              className="Card"
-              backgroundColor="gray.800"
+              className="card-container"
+              backgroundColor="gray.700"
+              border="3px solid"
+              borderColor="white"
               borderRadius={25}
               textAlign="center"
               onClick={() => {
@@ -84,7 +86,7 @@ function Container() {
       </SimpleGrid>
 
       {ships && numShown <= ships.length ? (
-        <Box textAlign="center" mb={5}>
+        <Box textAlign="center">
           <Button
             onClick={handleClick}
             colorScheme="blue"
@@ -96,7 +98,7 @@ function Container() {
           </Button>
         </Box>
       ) : ships.length !== 0 && ships.length > 10 ? (
-        <Box textAlign="Center" mb={10} fontWeight="bold">
+        <Box textAlign="Center" color="white">
           There are no more starships left to show.
         </Box>
       ) : (
